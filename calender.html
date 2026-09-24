@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Calendar</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Calendar Container */
+        .calendar-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Calendar Header */
+        .calendar-header {
+            background: #1abc9c;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .calendar-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Grid Layout for Days */
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            padding: 15px;
+            gap: 5px;
+            text-align: center;
+        }
+
+        /* Weekday Labels */
+        .weekday {
+            font-weight: bold;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            padding: 10px 0;
+        }
+
+        /* Day Numbers */
+        .day {
+            list-style: none;
+            padding: 12px 0;
+            font-size: 0.95rem;
+            color: #2c3e50;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .day:hover {
+            background-color: #e8f8f5;
+        }
+
+        /* Empty slots for spacing days correctly */
+        .empty-day {
+            visibility: hidden;
+        }
+
+        /* Highlight the Active/Current Day */
+        .day.active {
+            background-color: #1abc9c;
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calendar-container">
+        <!-- Header displaying Month & Year -->
+        <div class="calendar-header">
+            <h2>October 2026</h2>
+        </div>
+
+        <!-- Calendar Grid -->
+        <div class="calendar-grid">
+            <!-- Weekday Titles -->
+            <div class="weekday">Sun</div>
+            <div class="weekday">Mon</div>
+            <div class="weekday">Tue</div>
+            <div class="weekday">Wed</div>
+            <div class="weekday">Thu</div>
+            <div class="weekday">Fri</div>
+            <div class="weekday">Sat</div>
+
+            <!-- Empty slots to align October 1st (which falls on a Thursday) -->
+            <div class="empty-day"></div>
+            <div class="empty-day"></div>
+            <div class="empty-day"></div>
+            <div class="empty-day"></div>
+
+            <!-- Calendar Days (1 to 31) -->
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day">20</div>
+            <div class="day">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day text-center">25</div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day">28</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+            <div class="day">31</div>
+        </div>
+    </div>
+
+</body>
+</html>
